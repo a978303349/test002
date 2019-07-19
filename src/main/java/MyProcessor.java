@@ -9,6 +9,7 @@ public class MyProcessor implements PageProcessor {
         System.out.println(page.getHtml());
         //把当前页面的所有链接都添加到目标页面进行爬取
         page.addTargetRequest((Request) page.getHtml().links().all());
+        System.out.println("1111111111");
 
         System.out.println(page.getHtml().xpath("//[@id=\"nav\"]/div/div/ul/li[5]/a/text()").toString());
     }
